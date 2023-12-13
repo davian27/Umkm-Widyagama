@@ -44,9 +44,9 @@
     align-items: center;
   }
   
-  .navbar .box-navbar .logo h1 {
-    color: white;
-    font-size: 24px;
+  .navbar .box-navbar .logo img{
+    height: 5rem;
+    width: 5rem;
   }
   
   .navbar .box-navbar .menu {
@@ -269,6 +269,8 @@
     color: white;
     padding-inline: 10px;
   }
+
+  .daftar .box-daftar button:hover
   
   .daftar .box-daftar button i {
     font-size: 16px;
@@ -341,25 +343,17 @@
       row-gap: 20px;
       justify-content: center;
       align-items: center;
-      top: 70px;
+      top: 50px;
       right: 50%;
       transform: translateX(50%);
-      -webkit-transform: translateX(50%);
-      -moz-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-      -o-transform: translateX(50%);
       opacity: 0;
       transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
       background-color: #0050b3;
     }
   
     .navbar .box-navbar .menu.menu-active {
-      top: 80px;
       opacity: 1;
+      margin-top: 3rem;
     }
   
     .hero .box-hero .box:nth-child(1) p {
