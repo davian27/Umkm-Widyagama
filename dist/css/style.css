@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #080b0c;
+
+  }
+  
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/batik.jpg");
+    height: 100svh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    width: 80%;
+    margin-inline: auto;
+  }
+  
+  .navbar {
+    padding: 20px 0 20px 0;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .navbar.scrolling-active {
+    background-color: #0050b3;
+    padding: 10px 0 15px 0;
+  }
+  
+  .navbar .box-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .box-navbar .logo img{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  .navbar .box-navbar .menu {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+  .navbar .box-navbar .menu li {
+    list-style-type: none;
+  }
+  
+  .navbar .box-navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .navbar .box-navbar .menu .active a {
+    background-color: #0050b3;
+  }
+  
+  .navbar .box-navbar .menu li a:hover {
+    background-color: #0050b3;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-bar {
+    color: white;
+    font-size: 24px;
+    display: none;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+  }
+  
+  .hero .box-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero .box-hero .box:nth-child(1) h1 {
+    color: white;
+    font-size: 3vw;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+  
+  .hero .box-hero .box:nth-child(1) p {
+    line-height: 2;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 100;
+  }
+  
+  .hero .box-hero .box:nth-child(1) button {
+    width: 180px;
+    height: 50px;
+    background-color: #0050b3;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .hero .box-hero .box:nth-child(1) button:hover {
+    background-color: #053e83;
+    transition: all 0.3s ease;
+  }
+  
+  .hero .box-hero .box:nth-child(2) img {
+    width: 100%;
+  }
+  
+  .services {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px 0;
+  }
+  
+  .services .box-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 50px;
+  }
+  
+  .services .box-services .box {
+    width: 300px;
+    text-align: center;
+    color: white;
+  }
+  
+  .services .box-services .box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #0050b3;
+  }
+  
+  .services .box-services .box p {
+    font-weight: 100;
+  }
+  
+  .batik{
+    padding: 50px 0 50px 0;
+}
+
+.batik .box-batik {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    row-gap: 50px;
+}
+
+.batik .box-batik .box{
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.batik .box-batik .box:hover{
+    transform: translateY(-20px);
+}
+
+.batik .box-batik .box img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.batik .box-batik .box p {
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.batik .box-batik .box button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color: #0050b3;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.batik .box-batik .box button:hover{
+    background-color: #042750;
+    transition: all 0.3s ease;
+}
+  
+  .daftar {
+    padding: 50px 0 100px 0;
+  }
+  
+  .daftar .box-daftar {
+    color: white;
+    text-align: center;
+  }
+  
+  .daftar .box-daftar h1 {
+    margin-bottom: 50px;
+  }
+  
+  .daftar .box-daftar h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+    animation: animasi;
+    -webkit-animation: animasi 2s infinite;
+  }
+  
+  @keyframes animasi {
+    0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+  }
+  
+  .daftar .box-daftar button {
+    border: none;
+    min-width: 100px;
+    min-height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    background-color: #0050b3;
+    color: white;
+    padding-inline: 10px;
+  }
+
+  .daftar .box-daftar button:hover
+  
+  .daftar .box-daftar button i {
+    font-size: 16px;
+    font-weight: bold;
+    margin-inline: 5px;
+  }
+  
+  .footer {
+    padding: 10px 0 10px 0;
+    background-color: #0050b3;
+  }
+  
+ .footer .box h3,p {
+  color: white;
+  position: relative;
+  margin-bottom: 1rem;
+ }
+
+ .footer .box-copy p{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.538);
+  font-size: 1rem;
+ }
+
+  #whatsapp .wtsapp{
+    position: fixed;
+    transform: all .5s ease;
+    background-color: #25d366;
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 15);
+    border-radius: 50px;
+    border-right: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    bottom: 15px;
+    right: 20px;
+    border: 0;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
+  }
+  #whatsapp .wtsapp:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    -webkit-animation: pulse-border 1500ms ease-out infinite;
+    animation: pulse-border 1500ms ease-out infinite;
+  }
+
+  #whatsapp .wtsapp:focus{
+    border: none;
+    outline: none;
+  }
+  @keyframes pulse-border {
+
+    0% {transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}
+    
+    100% {transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0;}
+    
+    }
+
+  
+  @media screen and (max-width: 1200px) {
+    .hero .box-hero .box:nth-child(1) button {
+      width: 150px;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+    .menu-bar {
+      display: block;
+    }
+  
+    .navbar .box-navbar .menu {
+      position: absolute;
+      flex-direction: column;
+      width: 100%;
+      height: 200px;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+      top: 50px;
+      right: 50%;
+      transform: translateX(50%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      background-color: #0050b3;
+    }
+  
+    .navbar .box-navbar .menu.menu-active {
+      opacity: 1;
+      margin-top: 3rem;
+    }
+  
+    .hero .box-hero .box:nth-child(1) p {
+      font-size: 14px;
+    }
+  
+    .daftar .box-daftar h1 {
+      font-size: 28px;
+    }
+  
+    .footer .box-footer {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero .box-hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+  
+    .hero .box-hero .box:nth-child(1) {
+      order: 2;
+      text-align: center;
+    }
+  
+    .hero .box-hero .box:nth-child(2) {
+      order: 1;
+      text-align: center;
+    }
+  
+    .hero .box-hero .box:nth-child(2) img {
+      width: 55vw;
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .hero .box-hero .box:nth-child(1) h1 {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 475px) {
+    .daftar .box-daftar button {
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 370px) {
+    .hero .box-hero .box:nth-child(2) {
+      width: 55vw;
+      align-self: flex-end;
+      justify-self: center;
+    }
+  
+    .batik .box-batik {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
