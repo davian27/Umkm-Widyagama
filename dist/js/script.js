@@ -8,7 +8,7 @@ menuBar.addEventListener("click", () => {
 const navBar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   const windowPosition = window.scrollY > 0;
   navBar.classList.toggle("scrolling-active", windowPosition);
   menuNav.classList.remove("menu-active");
@@ -23,9 +23,15 @@ function openBatikPopup(title, description, imagePath) {
 }
 
 function closeBatikPopup() {
-  var popup = document.getElementById("popupBatik");
-  popup.style.display = "none";
+  try {
+    var popup = document.getElementById("popupBatik");
+    popup.style.display = "none";
+} catch (error) {
+    console.error("Terjadi kesalahan:", error);
 }
+}
+
+
 
 
 

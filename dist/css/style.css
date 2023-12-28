@@ -111,7 +111,7 @@
     line-height: 2;
     color: white;
     margin-bottom: 20px;
-    font-weight: 100;
+    font-weight: 200;
   }
   
   .hero .box-hero .box:nth-child(1) button {
@@ -240,11 +240,14 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    background-color: #cbcbcbb2;
+    backdrop-filter: blur(12px);
+    border-radius: 5px;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #fff;
+    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 2; /* Lebih tinggi dari z-index konten lainnya */
+    z-index: 999;
 }
 
 .popup-content {
@@ -253,10 +256,11 @@
 
 .close {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 #popupImage {
@@ -270,6 +274,14 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+.btn-popup p{
+  color: black;
+}
+button {
+  pointer-events: auto;
+}
+
   
   @keyframes animasi {
     0% {
@@ -324,7 +336,7 @@
   }
   
  .footer .box h3,p {
-  color: white;
+  
   position: relative;
   margin-bottom: 1rem;
  }
