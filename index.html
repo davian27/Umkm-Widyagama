@@ -24,9 +24,10 @@
 
     <!-- favicon section -->
     <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+    
 
     <!-- CSS -->
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="/dist/css/style.css" />
     <title>Batik Indonesia</title>
   </head>
   <body>
@@ -35,7 +36,7 @@
         <div class="container">
           <div class="box-navbar">
             <div class="logo">
-              <img src="/logo2.png" alt="">
+              <h1>Zwölf<span>Store</span></h1>
             </div>
             <ul class="menu">
               <li><a href="#home">Home</a></li>
@@ -53,8 +54,8 @@
           <div class="box-hero">
             <div class="box">
               <h1>
-                Zwölf Store <br />
-                Thrifting Now
+                Zwölf Batik<br/>
+                <span style="color: whitesmoke;">Shop Now</span>
               </h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, autem?</p>
               <button>Selengkapnya</button>
@@ -66,6 +67,13 @@
         </div>
       </div>
     </header>
+
+    <!-- Whatsapp Floating -->
+    <div id="whatsapp">
+        <a href="https://wa.me/+6282257006865?text=I'm%20interested%20in%20your%20batik%20product%20" target="_blank" id="toogle1" class="wtsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Services -->
     <div class="services" id="services">
@@ -91,55 +99,66 @@
     </div>
     <!-- Services -->
 
+    <!-- popup section -->
+    <div id="popupBatik" class="popup">
+      <div class="popup-content">
+          <span class="close" onclick="closeBatikPopup()">&times;</span>
+          <h2>Detail Batik</h2>
+          <img src="" alt="" id="popupImage">
+          <h3 id="popupBatikTitle"></h3>
+          <p id="popupBatikDescription"></p>
+      </div>
+  </div>
+
     <!-- Batik -->
     <div class="batik">
-        <div class="container">
-            <div class="box-batik">
-                <div class="box">
-                    <img src="pantai1.jpg" alt="">
-                    <h3>Destination batik</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque, veritatis.</p>
-                    <button>Details</button>
-                </div>
-                <div class="box">
-                    <img src="pantai2.jpg" alt="">
-                    <h3>Destination batik 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque, veritatis.</p>
-                    <button>Details</button>
-                </div>
-                <div class="box">
-                    <img src="pantai3.jpg" alt="">
-                    <h3>Destination batik 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque, veritatis.</p>
-                    <button>Details</button>
-                </div>
-                <div class="box">
-                    <img src="pantai4.jpg" alt="">
-                    <h3>Destination batik 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque, veritatis.</p>
-                    <button>Details</button>
-                </div>
-                <div class="box">
-                    <img src="pantai5.jpg" alt="">
-                    <h3>Destination batik 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque, veritatis.</p>
-                    <button>Details</button>
-                </div>
-                <div class="box">
-                    <img src="pantai6.jpg" alt="">
-                    <h3>Destination batik 6</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque, veritatis.</p>
-                    <button>Details</button>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="container">
+          <div class="box-batik">
+            <div class="box" onclick="openBatikPopup('Batik Malang', 'Deskripsi Batik Malang', 'batik2.png')">
+              <img src="batik2.png" alt="">
+              <h3>Batik Malang</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, veritatis.</p>
+              <button>Details</button>
+          </div>
+          <div class="box" onclick="openBatikPopup('Batik Pekalongan', 'Deskripsi Batik Pekalongan', 'batik3.png')">
+                  <img src="batik3.png" alt="">
+                  <h3>Batik Pekalongan</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Cumque, veritatis.</p>
+                  <button>Details</button>
+              </div>
+              <div class="box" onclick="openBatikPopup('Batik Kalimantan', 'Deskripsi Batik Kalimantan', 'batik4.jpeg')">
+                  <img src="batik4.jpeg" alt="">
+                  <h3>Batik Kalimantan</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Cumque, veritatis.</p>
+                  <button>Details</button>
+              </div>
+              <div class="box" onclick="openBatikPopup('Batik Yogyakarta', 'Deskripsi Batik Kalimantan', 'batik8.jpeg')">
+                  <img src="batik8.jpeg" alt="">
+                  <h3>Batik Yogyakarta</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Cumque, veritatis.</p>
+                  <button>Details</button>
+              </div>
+              <div class="box" onclick="openBatikPopup('Batik Sumatera', 'Deskripsi Batik Kalimantan', 'batik6.jpeg')">
+                  <img src="batik6.jpeg" alt="">
+                  <h3>Batik Sumatera</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Cumque, veritatis.</p>
+                  <button>Details</button>
+              </div>
+              <div class="box" onclick="openBatikPopup('Batik Sunda', 'Deskripsi Batik Kalimantan', 'batik7.jpeg')">
+                  <img src="batik7.jpeg" alt="">
+                  <h3>Batik Sunda</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Cumque, veritatis.</p>
+                  <button>Details</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
     <!-- Batik -->
 
     <!-- Daftar -->
@@ -159,22 +178,17 @@
     </div>
     <!-- Daftar -->
 
+    <!-- Popup Section -->
+
     <!-- Footer -->
     <div class="footer">
       <div class="container">
         <div class="box-footer">
           <div class="box">
-            <h2>Wiga Dev Team</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam eius rerum quisquam perspiciatis obcaecati, quasi temporibus aperiam iusto aliquam doloremque.</p>
+            <h3>Wiga Dev Team</h3>
+            <p><b>Development By :</b><br>Davian Naufal F<br>M Kesya Sakha A<br>M Firza Alif Ramadhan</p>
           </div>
-          <div class="box">
-            <h3>Menu</h3>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#pantai">Pantai</a>
-            <a href="#daftar">Daftar</a>
-          </div>
-          <div class="box">
+          <div class="box-copy">
             <p>&copy; Copyright by <span>Widyagama Development Team</span> All Rights Reserved 2023</p>
           </div>
         </div>
@@ -182,7 +196,7 @@
     </div>
     <!-- Footer -->
 
-    <script src="dist/js/script.js"></script>
+    <script src="/dist/js/script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>

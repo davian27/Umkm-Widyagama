@@ -13,3 +13,19 @@ window.addEventListener("scroll", () => {
   navBar.classList.toggle("scrolling-active", windowPosition);
   menuNav.classList.remove("menu-active");
 });
+
+function openBatikPopup(title, description, imagePath) {
+  var popup = document.getElementById("popupBatik");
+  document.getElementById("popupBatikTitle").innerText = title;
+  document.getElementById("popupBatikDescription").innerText = description;
+  document.getElementById("popupImage").src = imagePath;
+  popup.style.display = "block";
+}
+
+function closeBatikPopup() {
+  var popup = document.getElementById("popupBatik");
+  popup.style.display = "none";
+}
+
+
+

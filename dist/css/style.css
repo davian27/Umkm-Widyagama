@@ -26,7 +26,7 @@
   }
   
   .navbar {
-    padding: 20px 0 20px 0;
+    padding: 12px 0 12px 0;
     position: fixed;
     width: 100%;
     transition: all 0.3s ease;
@@ -34,7 +34,8 @@
   }
   
   .navbar.scrolling-active {
-    background-color: #0050b3;
+    background-color: #0a0a0ab2;
+    backdrop-filter: blur(12px);
     padding: 10px 0 15px 0;
   }
   
@@ -44,9 +45,11 @@
     align-items: center;
   }
   
-  .navbar .box-navbar .logo img{
-    height: 5rem;
-    width: 5rem;
+  .navbar .box-navbar .logo h1{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: #fff;
   }
   
   .navbar .box-navbar .menu {
@@ -230,6 +233,43 @@
     animation: animasi;
     -webkit-animation: animasi 2s infinite;
   }
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Lebih tinggi dari z-index konten lainnya */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popupImage {
+   width: 2rem;
+   height: 2rem;
+}
+.popup-content a {
+  display: block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
   
   @keyframes animasi {
     0% {
@@ -279,54 +319,80 @@
   }
   
   .footer {
-    padding: 50px 0 50px 0;
+    padding: 10px 0 10px 0;
     background-color: #0050b3;
   }
   
-  .footer .box-footer {
-    display: grid;
-    grid-template-columns: 2fr auto 2fr;
-    column-gap: 100px;
-    align-items: center;
-  }
-  
-  .footer .box-footer .box {
-    color: white;
-  }
-  
-  .footer .box-footer .box:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-  
-  .footer .box-footer .box:nth-child(2) a {
-    text-decoration: none;
-    color: white;
-    font-weight: 200;
-  }
-  
-  .footer .box-footer .box p {
-    font-weight: 200;
-  }
-  
-  .footer .box-footer .box:nth-child(1) p {
-    font-size: 12px;
-    line-height: 2;
-    margin-top: 10px;
-  }
-  
-  .footer .box-footer .box:nth-child(3) {
+ .footer .box h3,p {
+  color: white;
+  position: relative;
+  margin-bottom: 1rem;
+ }
+
+ .footer .box-copy p{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.538);
+  font-size: 1rem;
+ }
+
+  #whatsapp .wtsapp{
+    position: fixed;
+    transform: all .5s ease;
+    background-color: #25d366;
+    display: block;
     text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 15);
+    border-radius: 50px;
+    border-right: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    bottom: 15px;
+    right: 20px;
+    border: 0;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
   }
-  
-  .footer .box-footer .box:nth-child(3) span {
-    font-weight: bold;
+  #whatsapp .wtsapp:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    -webkit-animation: pulse-border 1500ms ease-out infinite;
+    animation: pulse-border 1500ms ease-out infinite;
   }
+
+  #whatsapp .wtsapp:focus{
+    border: none;
+    outline: none;
+  }
+  @keyframes pulse-border {
+
+    0% {transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}
+    
+    100% {transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0;}
+    
+    }
+
   
   @media screen and (max-width: 1200px) {
     .hero .box-hero .box:nth-child(1) button {
       width: 150px;
+    }
+    .navbar .box-navbar .logo img{
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-top: 0.5rem;
     }
   }
   
@@ -376,6 +442,12 @@
       grid-template-rows: repeat(2, 1fr);
       row-gap: 10px;
     }
+
+    .navbar .box-navbar .logo img{
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-top: 0.5rem;
+    }
   
     .hero .box-hero .box:nth-child(1) {
       order: 2;
@@ -396,11 +468,23 @@
     .hero .box-hero .box:nth-child(1) h1 {
       font-size: 18px;
     }
+
+    .navbar .box-navbar .logo img{
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-top: 0.5rem;
+    }
   }
   
   @media screen and (max-width: 475px) {
     .daftar .box-daftar button {
       margin-bottom: 5px;
+    }
+
+    .navbar .box-navbar .logo img{
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-top: 1rem;
     }
   }
   
