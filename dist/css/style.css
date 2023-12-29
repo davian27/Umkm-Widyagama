@@ -55,8 +55,6 @@
   .navbar .box-navbar .menu {
     display: flex;
     column-gap: 20px;
-    background-color: #0a0a0af8;
-    backdrop-filter: blur(200px);
   }
   
   .navbar .box-navbar .menu li {
