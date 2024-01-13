@@ -26,11 +26,11 @@
   }
   
   .navbar {
-    padding: 12px 0 12px 0;
-    position: fixed;
-    width: 100%;
-    transition: all 0.3s ease;
-    z-index: 9999;
+      padding: 12px 0 12px 0;
+      position: fixed;
+      width: 100%;
+      transition: all 0.3s ease;
+      z-index: 9999;
   }
   
   .navbar.scrolling-active {
@@ -76,6 +76,7 @@
     background-color: #0050b3;
     transition: all 0.3s ease;
   }
+
   
   .menu-bar {
     color: white;
@@ -342,6 +343,30 @@ button {
       color: white;
       text-align: center;
     }
+    @keyframes slidy {
+      0% { left: 0%; }
+      20% { left: 0%; }
+      25% { left: -100%; }
+      45% { left: -100%; }
+      50% { left: -200%; }
+      70% { left: -200%; }
+      75% { left: -300%; }
+      95% { left: -300%; }
+      100% { left: -400%; }
+      }
+      
+      body { margin: 0; } 
+      div#slider { overflow: hidden; }
+      div#slider figure img { width: 20%; float: left; }
+      div#slider figure { 
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 30s slidy infinite; 
+      }
 
   
   @media screen and (max-width: 1200px) {
@@ -373,13 +398,15 @@ button {
       transform: translateX(50%);
       opacity: 0;
       transition: all 0.3s ease;
-      /* background-color: #0a0a0a;
-      backdrop-filter: blur(200px); */
+      background-color: #0050b3;
     }
+
+
   
     .navbar .box-navbar .menu.menu-active {
       opacity: 1;
       margin-top: 3rem;
+      
     }
   
     .hero .box-hero .box:nth-child(1) p {
@@ -397,6 +424,11 @@ button {
     .column {
       width: 100%;
       box-sizing: border-box;
+    }
+    .navbar.scrolling-active {
+      background-color: #0a0a0ab2;
+      backdrop-filter: blur(12px);
+      padding: 10px 0 15px 0;
     }
   }
   
